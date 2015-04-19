@@ -131,7 +131,7 @@ B
 (define square (lambda (x) (* x x)))
 
 (mean-square 2 3) → 6.5
-;# END BOARD
+; END BOARD
 
 
 ; TERMINAL 0:46:20
