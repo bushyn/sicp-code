@@ -54,6 +54,7 @@ To evaluate an application
 ; END BOARD
 
 
+
 ; SLIDE 0:12:30
 To evaluate an IF expression
     Evaluate the predicate expression
@@ -62,6 +63,7 @@ To evaluate an IF expression
         otherwise
             evaluate the alternative expression
 ; END SLIDE
+
 
 
 ; BOAD 0:12:45
@@ -126,12 +128,14 @@ Two ways to add whole numbers:
 ; END SLIDE
 
 
+
 ; BOARD 0:21:35
 (define (+ x y)
     (if (= x 0)
         y
         (+ (-1+ x) (1+ y))))
 ; END BOARD
+
 
 
 ; BOARD 0:22:05
@@ -143,12 +147,14 @@ Two ways to add whole numbers:
 ; END BOARD
 
 
+
 ; BOARD 0:23:15
 (define (+ x y)
     (if (= x 0)
         y
         (1+ (+ (-1+ x) y))))
 ; END BOARD
+
 
 
 ; BOARD 0:24:00
@@ -163,9 +169,8 @@ Two ways to add whole numbers:
 ; END BOARD
 
 
-;;;
-;;; BREAK 0:36:45
-;;;
+
+; BREAK 0:36:45
 
 
 
@@ -181,6 +186,7 @@ fib: 0 1 1 2 3 5 8 13 21 34 55
 ; END BOARD
 
 
+
 ; BOARD 0:49:45
 (define (move n from to spare)
     (cond   ((= n 0) "DONE")
@@ -189,6 +195,7 @@ fib: 0 1 1 2 3 5 8 13 21 34 55
                 (print-move from to)
                 (move (-1+ n) spare to from))
 ; END BOARD
+
 
 
 ; BOARD 0:53:00
