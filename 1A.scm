@@ -2,6 +2,7 @@
 ; Lecturer: Harold Abelson
 
 
+
 ; SLIDE 0:04:10
 Declarative Knowledge
 "WHAT IS TRUE"
@@ -9,6 +10,7 @@ Declarative Knowledge
 √X is the Y such that
 Y² = X and Y ≥ 0
 ; END SLIDE
+
 
 
 ; SLIDE 0:04:35
@@ -20,6 +22,7 @@ To find an approximation to √X
 • Improve the guess by averaging G and X/G
 • Keep improving the guess until it is good enough
 ; END SLIDE
+
 
 
 ; SLIDE 0:14:35
@@ -34,8 +37,9 @@ Example
 ; END SLIDE
 
 
+
 ; SLIDE 0:18:20
-Black - Box Abstraction
+Black-Box Abstraction
 
 • Primitive Objects
     Primitive Procedures
@@ -55,6 +59,7 @@ Black - Box Abstraction
 ; END SLIDE
 
 
+
 ; SLIDE 0:23:50
 Conventional Interfaces
 
@@ -63,6 +68,7 @@ Conventional Interfaces
 • Object-Oriented Programming
 • Operations on Aggregates
 ; END SLIDE
+
 
 
 ; SLIDE 0:27:05
@@ -74,7 +80,9 @@ Meta-Linguistic Abstraction
 ; END SLIDE
 
 
+
 ; BREAK 0:27:30
+
 
 
 ; TERMINAL 0:35:45
@@ -87,13 +95,15 @@ Meta-Linguistic Abstraction
 ; END TERMINAL
 
 
+
 ; TERMINAL 0:37:25
-(+ 	(* 3 5)
+(+  (* 3 5)
     (* 47
         (- 20 6.8))
     12)
 => 647.4
 ; END TERMINAL
+
 
 
 ; BOARD 0:39:00
@@ -107,6 +117,7 @@ Meta-Linguistic Abstraction
 (* 6 6)
 (* 1001.7 1001.7)
 ; END BOARD
+
 
 
 ; TERMINAL 0:40:19
@@ -123,6 +134,7 @@ B
 ; END TERMINAL
 
 
+
 ; BOARD 0:42:35
 (define (square x) (* x x))
 
@@ -132,6 +144,7 @@ B
 
 (mean-square 2 3) → 6.5
 ; END BOARD
+
 
 
 ; TERMINAL 0:46:20
@@ -152,6 +165,7 @@ SQUARE
 ; END TERMINAL
 
 
+
 ; SLIDE 0:48:50
 (define (average x y)
     (/ (+ x y) 2))
@@ -159,6 +173,7 @@ SQUARE
 (define (mean-square x y)
     (average (square x) (square y)))
 ; END SLIDE
+
 
 
 ; BOARD 0:51:55
@@ -169,6 +184,7 @@ SQUARE
 ; END BOARD
 
 
+
 ; SLIDE 0:54:20
 (define (abs x)
     (if (< x 0)
@@ -177,7 +193,9 @@ SQUARE
 ; END SLIDE
 
 
+
 ; BREAK 0:56:10
+
 
 
 ; SLIDE 0:57:15
@@ -187,6 +205,7 @@ To find an approximation to √X
 • Keep improving the guess until it is good enough
 • Use 1 as an initial guess
 ; END SLIDE
+
 
 
 ; BOARD 0:59:10
@@ -199,6 +218,7 @@ To find an approximation to √X
 ; END BOARD
 
 
+
 ; SLIDE 0:01:50
 (define (improve guess x)
     (average guess (/ x guess)))
@@ -209,18 +229,20 @@ To find an approximation to √X
 ; END SLIDE
 
 
+
 ; BOARD 1:03:35
 (sqrt 2)
    ↓
 (try 1 2)
    ↓
 (try (improve 1 2) 2)
-          ↓↑  
+          ↓↑
   (average 1 (/ 2 1))
         1.5
-        
+
 (try 1.5 2)
 ; END BOARD
+
 
 
 ; SLIDE 1:06:45
